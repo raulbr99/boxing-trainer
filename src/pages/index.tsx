@@ -1,12 +1,9 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-import Timer from "../components/Timer";
 
-const inter = Inter({ subsets: ["latin"] });
+import Timer from "../components/Timer";
 
 export default function Home() {
   return (
-    <main className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}>
+    <main className={`flex min-h-screen flex-col items-center justify-between`}>
       <Timer />
     </main>
   );

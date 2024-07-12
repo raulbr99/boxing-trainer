@@ -44,7 +44,8 @@ const Timer: React.FC = () => {
   };
 
   return (
-    <div className={`flex flex-col items-center justify-center ${seconds === 0 ? 'bg-red-500 min-h-screen' : ''} w-full h-full`}>
+    seconds > 0 ? 
+    <div className={`flex flex-col items-center justify-center w-full h-full`}>
       <h1 className="text-6xl font-bold">
         {String(minutes).padStart(2, '0')}:{String(seconds % 60).padStart(2, '0')}
       </h1>
@@ -67,6 +68,8 @@ const Timer: React.FC = () => {
         </button>
       </div>
     </div>
+    : 
+    <div className={`bg-red-700 w-screen h-screen absolute`} />
   );
 };
 
